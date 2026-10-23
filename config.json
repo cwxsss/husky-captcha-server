@@ -1,0 +1,33 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 7070,
+    "log_level": "info"
+  },
+  "auth": {
+    "require_api_key": false,
+    "api_key": "",
+    "require_protected_header": false,
+    "trust_localhost": true,
+    "daily_limit_per_ip": 0
+  },
+  "storage": {
+    "enabled": true,
+    "sqlite_path": "data/captcha.db",
+    "store_samples": true,
+    "store_events": true
+  },
+  "ocr": {
+    "provider": "ddddocr",
+    "arithmetic": true,
+    "beta_model": false,
+    "allow_remote_image_url": false
+  },
+  "slider": {
+    "method": "auto",
+    "gray_score_gate": 0.5,
+    "edge_low": 100,
+    "edge_high": 200,
+    "output_mode": "display"
+  }
+}

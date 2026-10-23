@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  captcha-server:
+    build: .
+    image: husky-captcha-server:latest
+    container_name: husky-captcha-server
+    restart: unless-stopped
+    ports:
+      - "7070:7070"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=7070
+      - DAILY_LIMIT=999999
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
